@@ -78,7 +78,6 @@
 
                 if (isvalide) {
                     this.form = Object.assign({}, initForm)
-                    console.log(this.form);
                     this.sendHideModalFormOnClick()
                 }
                 
