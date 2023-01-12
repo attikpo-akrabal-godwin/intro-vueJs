@@ -42,7 +42,7 @@
                     this.form.nomError = "le nom doit avoir plus de 3 caractères et ne contenant pas de chiffre"
                     isvalide=false
                 }else{
-                    this.form.nom =""
+                    this.form.nomError =""
                 }
 
                 if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(this.form.email)) {
@@ -168,7 +168,7 @@
             </form>
 </template>
 
-<style>
+<style  >
     .modale-form {
     /*margin-top: 6%;*/
     /*padding: 0 5%;*/
@@ -176,18 +176,7 @@
     justify-content: start;
     width: 90%; 
 }
-.thanks-modale {
-   
-    padding: 80% 0 ;
-    justify-content: center;
-    width: 100%; 
-    
-}
-.thanks{
-    color: white;
-    width: 100%;
-    height: 200px;
-}
+
 
 .inpuText {
     display: block;

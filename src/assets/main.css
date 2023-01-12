@@ -1,0 +1,6 @@
+html ,body{
+    max-width: 1440px;
+    font-family: Verdana;
+    overflow-x: hidden;
+    margin: 0  auto ;
+}

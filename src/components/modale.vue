@@ -1,9 +1,9 @@
-<script>
-    import modalForm from './modalForm.vue'
+<script scoped>
+    import ModalForm from './ModalForm.vue'
     export default {
         emits:["showModalOnClick"],
         components:{
-            modalForm
+            ModalForm
         },
         methods:{
             sendShowModalEvent(){
@@ -26,7 +26,7 @@
         <div class="modale-content">
             <span id="close"  class="close-button" @click="sendShowModalEvent">&times;</span>
             <div class="modal">
-                <modalForm v-if="showModalForm" @hideModalFormOnClick="togleModalForm" />
+                <ModalForm v-if="showModalForm" @hideModalFormOnClick="togleModalForm" />
                 <div v-else class="thanks-modale">
                     <div class="thanks">
                         Merci pour votre inscription
@@ -39,7 +39,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     .modale-container{
     position: fixed;
     left: 0;
@@ -73,7 +73,17 @@
     height: 100%;
     position: relative;
 }
-
+.thanks-modale {
+   padding: 80% 0 ;
+   justify-content: center;
+   width: 100%; 
+   
+}
+.thanks{
+   color: white;
+   width: 100%;
+   height: 200px;
+}
 .close-button {
     float: right;
     width: 2rem;

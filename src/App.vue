@@ -1,10 +1,10 @@
-<script >
-import first from './components/first.vue'
-import modale from './components/modale.vue';
+<script scoped >
+import Main from './components/Main.vue'
+import Modale from './components/Modale.vue';
 export default {
     components:{
-        first,
-        modale
+        Main,
+        Modale
     },
     data(){
         return {
@@ -20,15 +20,10 @@ export default {
 </script>
 
 <template>
-    <modale v-if="showModale" @showModalOnClick="toggle"/>
-    <first @showModalOnClick="toggle"/>
+    <Modale v-if="showModale" @showModalOnClick="toggle"/>
+    <Main @showModalOnClick="toggle"/>
 </template>
 
-<style >
-html ,body{
-    max-width: 1440px;
-    font-family: Verdana;
-    overflow-x: hidden;
-    margin: 0  auto ;
-}
+<style scoped >
+
 </style>
